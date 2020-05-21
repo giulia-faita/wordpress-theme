@@ -11,9 +11,23 @@
 ?>
 
 <?php get_header(); ?>
+
+<!-- page hero -->
+<?php get_template_part('template-parts/sections/section-page-hero')?>
+
+<!-- section who we are -->
+<?php get_template_part('template-parts/sections/section-who-we-are')?>
+
+
+
+
+
 <div class="container">
     <div class="row">
         <div class="col">
+
+
+         
 
 <?php 
 //wordpress loop

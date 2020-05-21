@@ -44,7 +44,7 @@ body {
         top: 0px;
         left: 0px;
         //background-color: rgba($color: #000000, $alpha: 0.2);
-        background-image: url('../../assets/img/pattern-hero.png');
+        background-image: url('#{$images-path}/pattern-hero.png');
     }
     .page-hero-content {
         min-height: 336px;
