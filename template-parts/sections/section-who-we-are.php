@@ -42,8 +42,9 @@ if($who_we_are):
                             
                     </div>
 
-                    <div class="col-12 col-md-6 d-none d-md-block">
-                    <img class="img-who-we-are d-none d-md-block" src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="maglietta vans">
+                    <?php if( !empty( $who_we_are['image'] ) ): ?>
+    <img src="<?php echo esc_url($who_we_are['image']['url']); ?>" alt="<?php echo esc_attr($who_we_are['image']['alt']); ?>" />
+<?php endif; ?>
                       
                     </div>
                 </div>
