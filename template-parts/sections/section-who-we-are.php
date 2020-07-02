@@ -17,7 +17,7 @@ if($who_we_are):
 ?>
 
  <!-- sezione chi siamo -->
- <section class="section section-who-we-are">
+ <section id="chi-siamo" class="section section-who-we-are">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 section-y-padding">

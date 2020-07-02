@@ -16,8 +16,6 @@
 ?>
 
 <?php get_header(); /** funzione */ ?> 
-
 index
-
 
 <?php get_footer(); ?>

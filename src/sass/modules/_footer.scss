@@ -1,0 +1,44 @@
+.page-footer {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    background-color: $primary;
+    color: $white;
+    font-size: 0.9em;
+    font-weight: 100;
+    a {
+        color: $white;
+    }
+    .pre-footer {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    .social-icon {
+        height: 31px;
+        width: auto;
+    }
+}
+
+.footer-logo {
+    max-width: 116px;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.wpcf7-form-control.wpcf7-submit.btn.btn-primary {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 3px;
+}
+
+.box-social {
+    display: flex;
+    align-items: center;
+}
+
+.box-social {
+    a {
+        margin-right: 10px;
+    }
+}

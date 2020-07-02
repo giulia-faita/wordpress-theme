@@ -1,0 +1,31 @@
+.widgettitle {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: $secondary;
+}
+
+.sidebar {
+    list-style-type: none;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.sidebar li {
+    margin-bottom: 40px;
+}
+
+.title-recent-post a {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $secondary;
+}
+
+.categoria,
+.data-copy {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}

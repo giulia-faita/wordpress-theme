@@ -19,8 +19,8 @@
         <a href="<?php echo $link_categoria; ?>"><span class="categoria">  <?php echo $nome_categoria ?> </span></a>
     <?php endif; ?> 
 
-    <span class="data-copy"><?php the_date(); ?></span> <br>
+    <span class="data-copy"><?php echo get_the_date(); ?></span> <br>
 
-    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+    <div class="title-recent-post"> <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> </div>
 
 <article>

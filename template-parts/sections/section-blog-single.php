@@ -1,6 +1,6 @@
 <?php
 /**
- * The homepage blog section file
+ * The article blog section file
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -30,8 +30,8 @@
     <div class="container">
         <div class="row"> 
 
-            <div class="col-12 mt-5 mb-5 text-primary">
-                <h2>BLOG</h2>
+            <div class="col-12 mt-5 mb-5 text-uppercase">
+                <h2>vedi anche...</h2>
             </div>
 
 
@@ -42,7 +42,7 @@
                             $the_query->the_post(); ?> 
                            
 
-                            <div class="col-lg-3 col-md-6"> 
+                            <div class="col-lg-3 col-md-6 mb-5"> 
 
                             <?php get_template_part('template-parts/teases/tease-post', get_post_type());?>
                                 
@@ -60,11 +60,6 @@
 
 
 
-        </div>
-        <div class="row"> 
-            <div class="col-12">
-                <a href="http://localhost:8888/blog/" class="btn btn-primary text-uppercase rounded-0 mt-5 mb-5">Continua</a>   
-            </div>       
         </div>
       
     </div>
