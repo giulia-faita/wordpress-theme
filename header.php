@@ -1,11 +1,11 @@
 <?php
 /**
- * Header file for the Sam Theme WordPress default theme.
+ * Header file for the Giulia Theme WordPress default theme.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Sam_Theme
+ * @subpackage Giulia_Theme
  * @since 1.0.0
  */
 

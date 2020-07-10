@@ -1,15 +1,15 @@
 <?php
 /**
- * Sam Theme functions and definitions
+ * Giulia Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Sam_Theme
+ * @subpackage Giulia_Theme
  * @since 1.0.0
  */
 
-if ( ! function_exists( 'samtheme_setup' ) ) :
+if ( ! function_exists( 'giuliatheme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -17,13 +17,13 @@ if ( ! function_exists( 'samtheme_setup' ) ) :
 	 * before the init hook. The init hook is too late for some features, such as indicating
 	 * support post thumbnails.
 	 */
-	function samtheme_setup() {
+	function Giuliatheme_setup() {
 	 
 		/**
 		 * Make theme available for translation.
 		 * Translations can be placed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'samtheme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'Giuliatheme', get_template_directory() . '/languages' );
 	 
 		/**
 		 * Add default posts and comments RSS feed links to <head>.
@@ -39,9 +39,9 @@ if ( ! function_exists( 'samtheme_setup' ) ) :
 		 * Add support for two custom navigation menus.
 		 */
 		register_nav_menus( array(
-			'primary'   => __( 'Primary Menu', 'samtheme' ),
-			'secondary' => __( 'Secondary Menu', 'samtheme' ),
-			'footer' => __( 'Footer Menu', 'samtheme' )
+			'primary'   => __( 'Primary Menu', 'Giuliatheme' ),
+			'secondary' => __( 'Secondary Menu', 'Giuliatheme' ),
+			'footer' => __( 'Footer Menu', 'Giuliatheme' )
 		) );
 	 
 		/**
@@ -50,15 +50,15 @@ if ( ! function_exists( 'samtheme_setup' ) ) :
 		 */
 		add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
 	}
-endif; // samtheme_setup
+endif; // Giuliatheme_setup
 
-add_action( 'after_setup_theme', 'samtheme_setup' );
+add_action( 'after_setup_theme', 'Giuliatheme_setup' );
 
 
 /**
  * Register and Enqueue Styles.
  */
-function samtheme_register_styles() {
+function Giuliatheme_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -79,8 +79,8 @@ function samtheme_register_styles() {
 
 
 }
-
-add_action( 'wp_enqueue_scripts', 'samtheme_register_styles' );
+//permette di registrare script e style
+add_action( 'wp_enqueue_scripts', 'Giuliatheme_register_styles' ); 
 
 /**
  * Register menus locations
@@ -88,9 +88,9 @@ add_action( 'wp_enqueue_scripts', 'samtheme_register_styles' );
 function register_my_menus() {
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'samtheme' ),
-			'secondary' => __( 'Secondary Menu', 'samtheme' ),
-			'footer' => __( 'Footer Menu', 'samtheme' )
+			'primary' => __( 'Primary Menu', 'Giuliatheme' ),
+			'secondary' => __( 'Secondary Menu', 'Giuliatheme' ),
+			'footer' => __( 'Footer Menu', 'Giuliatheme' )
 		)
 	);
 }
@@ -137,11 +137,6 @@ function wpdocs_theme_slug_widgets_init() {
 add_action( 'widgets_init', 'wpdocs_theme_slug_widgets_init' );
 
 
-
-
-
-
-
 /**
  * Extend Recent Posts Widget 
  *
@@ -181,8 +176,11 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 	  'posts_per_page'      => $number,
 	  'no_found_rows'       => true,
 	  'post_status'         => 'publish',
-	  'ignore_sticky_posts' => true
-	 ) ) );
+	  'ignore_sticky_posts' => true,
+	  'post_not_in' => array(get_the_ID()),
+	 ),
+	 $instance
+	 ) );
    
 	 if ($r->have_posts()) :
 	 ?>

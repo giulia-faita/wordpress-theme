@@ -3,7 +3,7 @@
  * Displays the featured image
  *
  * @package WordPress
- * @subpackage Sam_Theme
+ * @subpackage Giulia_Theme
  * @since 1.0.0
  */
 

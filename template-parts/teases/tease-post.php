@@ -1,3 +1,15 @@
+<?php
+/**
+ * Taese Post
+ * 
+ * https://developer.wordpress.org/themes/template-files-section/page-template-files/
+ *
+ * @package WordPress
+ * @subpackage Giulia_Theme
+ * @since 1.0.0
+*/
+?>
+
 <article class="tease-<?php echo $post->post_type ?>">
 
 

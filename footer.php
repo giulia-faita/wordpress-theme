@@ -5,7 +5,7 @@
  * Contains the opening of the #site-footer div and all content after.
  *
  * @package WordPress
- * @subpackage Sam_Theme
+ * @subpackage Giulia_Theme
  * @since 1.0.0
  */
     
@@ -25,14 +25,8 @@
             <div class="pre-footer bg-light">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-6 order-lg-2">
-                            <?php
-                                if($nl_contact_form_id){ 
-                                    echo do_shortcode( '[contact-form-7 id=' . $nl_contact_form_id . ']' ); 
-                                }
-                            ?>
-                        </div>
-                        <div class="box-social col-12 col-lg-6">
+                       
+                        <div class="col-12 col-lg-5">
                             
                             <?php if($linkedin_url):?>
                             <a href="<?php echo $linkedin_url; ?>"><img class="social-icon" src="<?php echo $path_images; ?>linkedin@2x.png" alt="linkedin"></a>
@@ -50,14 +44,22 @@
                             <a href="<?php echo $youtube_url; ?>"><img class="social-icon" src="<?php echo $path_images; ?>youtube@2x.png" alt="youtube"></a>
                             <?php endif;?>
                         </div>
+
+                        <div class="col-12 col-lg-7">
+                            <?php
+                                if($nl_contact_form_id){ 
+                                    echo do_shortcode( '[contact-form-7 id=' . $nl_contact_form_id . ']' ); 
+                                }
+                            ?>
+                        </div>
                         
                     </div>
                 </div>
             </div>
             <?php endif; ?>
-            <div class="container">
+            <div class="container red pt-5">
                 <div class="row">
-                    <div class="col col-md-6 col-lg-4">
+                    <div class="col-12  col-lg-4">
                         <!-- Logo -->
                         <?php 
                         $image = get_field('footer_logo', 'options');
@@ -67,17 +69,21 @@
                         <!-- Content -->
                         <?php the_field('footer_content', 'options'); ?>
                     </div>
-                    <div class="col col-md-6 col-lg-8">
+                    <div class="col-12  col-lg-8">
                         <div class="d-flex w-100 h-100 justify-content-end align-items-end flex-row">
-                            <?php 
+                        
+                             <?php 
                             $email = get_field('main_email', 'options');
                             if($email):?>
                                 <a href="mailto:<?php echo $email; ?>" class="px-3"><?php echo $email; ?></a>
                             <?php endif; ?>
-
+                      
+                        <div class="px-3">
                             <?php the_field('privacy_policy_link', 'options'); ?>
-                            <?php the_field('cookie_policy_link', 'options'); ?>
-                        </div>      
+                        </div>
+                        <div class="px-3"> 
+                            <?php the_field('cookie_policy_link', 'options'); ?></div>
+                            </div>      
                     </div>
                 </div>
             </div>
@@ -86,5 +92,5 @@
 
         <?php wp_footer(); ?>
 
-	</body>
+ </body>
 </html>

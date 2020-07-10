@@ -1,6 +1,15 @@
 <?php
-/** navbar **/
+/**
+ * Header Navbar
+ * 
+ * https://developer.wordpress.org/themes/template-files-section/page-template-files/
+ *
+ * @package WordPress
+ * @subpackage Giulia_Theme
+ * @since 1.0.0
+*/
 ?>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <?php get_template_part('template-parts/navbar/navbar', 'logo');

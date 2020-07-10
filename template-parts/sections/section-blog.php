@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage Sam_Theme
+ * @subpackage Giulia_Theme
  * @since 1.0.0
  */
 ?>
@@ -20,7 +20,7 @@
      'order'   => 'DESC',
 );
  
- // The Query
+ // Query custome al database con i parametri che inserisco negli array degli argomenti
  $the_query = new WP_Query( $args );
  
  ?>
@@ -35,7 +35,7 @@
             </div>
 
 
-                <?php  // The Loop
+                <?php  // Loop di wp con la query custome
                     if ( $the_query->have_posts() ) {
                       
                         while ( $the_query->have_posts() ) {
@@ -63,9 +63,9 @@
         </div>
         <div class="row"> 
             <div class="col-12">
-                <a href="http://localhost:8888/blog/" class="btn btn-primary text-uppercase rounded-0 mt-5 mb-5">Continua</a>   
-            </div>       
+            <a href="<?php echo get_template_directory_uri(); ?>/blog" class="btn btn-primary text-uppercase rounded-0 mt-5 mb-5">Continua</a>            </div>       
         </div>
       
     </div>
 </section>
+

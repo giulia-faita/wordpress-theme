@@ -1,5 +1,17 @@
 <?php
 /**
+ * Navbar Logo
+ * 
+ * https://developer.wordpress.org/themes/template-files-section/page-template-files/
+ *
+ * @package WordPress
+ * @subpackage Giulia_Theme
+ * @since 1.0.0
+*/
+?>
+
+<?php
+/**
  * header logo template part
  * 
  */

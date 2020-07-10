@@ -1,3 +1,15 @@
+<?php
+/**
+ * Section Categories
+ * 
+ * https://developer.wordpress.org/themes/template-files-section/page-template-files/
+ *
+ * @package WordPress
+ * @subpackage Giulia_Theme
+ * @since 1.0.0
+*/
+?>
+
 
 <?php 
     // $categories = get_categories( array(
@@ -24,8 +36,8 @@
             foreach( $categories as $category ) : 
                 $image = get_field('featured_image', $category);
                 $cat_url = get_category_link( $category->term_id );
-                $description = sprintf( esc_html__( 'Description: %s', 'sam-theme' ), $category->description );
-                $count = sprintf( esc_html__( 'Post Count: %s', 'sam-theme' ), $category->count );
+                $description = sprintf( esc_html__( 'Description: %s', 'Giulia-theme' ), $category->description );
+                $count = sprintf( esc_html__( 'Post Count: %s', 'Giulia-theme' ), $category->count );
                 ?>
                 <div class="col-12 col-md-6 my-3">
                     <article class="bg-dark tease-category">
@@ -47,7 +59,7 @@
                             ?>
 
                                 
-                                <a href="<?php echo $cat_url; ?>" class="btn btn-primary text-uppercase btn-lg rounded-0"><?php echo __('Continua','sam-theme')?></a>
+                                <a href="<?php echo $cat_url; ?>" class="btn btn-primary text-uppercase btn-lg rounded-0"><?php echo __('Continua','Giulia-theme')?></a>
                             </div>
                         </div>
                     </article>
